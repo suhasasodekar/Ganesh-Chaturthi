@@ -8,9 +8,10 @@
     <script src="script.js"></script>
 </head>
 <body>
-    <audio id="audio" src="https://jaiganesh.netlify.com/music.mp3">your </audio>
+    
 
 <div class="ganesh">
+	
 			<svg
 				id="ganesh"
 				version="1.1"
@@ -466,11 +467,38 @@
 			</svg>
 
 			<div class="credit">
-				<button id="btn" onclick="svgDraw()"> Jai Ganesh Deva
-				</button>
+				<img src="thaali.png" class="thaali" alt="" srcset=""><br>
+				<button id="btn" onclick="svgDraw()"> Jai Ganesh Deva</button>
 				<h1>Digital Art by Soham</h1>
 				<p>Press 'Jai Ganesh deva' button</p>
+				
 			</div>
-		</div>
+			<button id="shareButton" > <img src="share.svg" class="soham" alt="" srcset=""></button>
+			<p id="share">Share</p>
+			
+			   
+			   <div class="aarti">
+					<button id="btnm" onclick="toggleAudio();">Play Ganpati Aarti</button>
+					<script type="text/javascript">
+					  const audio = new Audio();
+					  audio.src = "Ganpatiaarti.mp3";
+					  let isPlaying = false;
+				  
+					  function toggleAudio() {
+						if (isPlaying) {
+						  audio.pause();
+						  audio.currentTime = 0; // Reset audio to the beginning
+						  document.getElementById("btnm").textContent = "Play Ganpati Aarti";
+						} else {
+						  audio.play();
+						  document.getElementById("btnm").textContent = "Stop";
+						}
+						isPlaying = !isPlaying;
+					  }
+					</script>
+				  </div>
+				  
+		<script src="share.js"></script>
+		
 </body>
 </html>
